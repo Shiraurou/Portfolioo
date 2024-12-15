@@ -1,0 +1,182 @@
+.header{
+    display: flex;
+    align-items: center;
+    background-color: #2E4053;
+    padding:5px;
+    margin-bottom:20%;
+} 
+.Title{
+    margin-right: auto;
+    color:white;
+}
+.nav{
+    margin-left: auto;      
+    display: flex;  
+    flex-wrap: wrap;
+}
+a{
+    padding: 5px;
+    width: 70px;   
+    margin: 10px;
+    border: 2px solid;
+    border-color: #002dff;
+    border-radius: 12px 12px;
+    text-decoration: none;
+    color: #00d5ff;
+}
+a.active{
+    border-color: #00d5ff; 
+    color:#80d6ff;   
+}
+
+.Content a {
+    padding: 5px;
+    width: 70px;   
+    margin: 10px;
+    border: 2px solid;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    position: relative; 
+    text-shadow: 0 0 10px #00ffea, 0 0 20px #1577ff, 0 0 30px #002dff, 0 0 40px #2600ff; 
+    transition: all 0.3s ease;
+}
+
+.Content a:hover {    
+    text-shadow: 0 0 15px rgba(255, 69, 69, 0.7), 0 0 30px rgba(0, 255, 153, 0.7), 0 0 45px rgba(0, 106, 255, 0.7), 0 0 60px rgba(255, 0, 149, 0.7);
+}
+
+.Content a.active {
+    border-color: red; 
+    color: red;
+    text-shadow: 0 0 10px rgba(255, 69, 69, 0.5), 0 0 20px rgba(0, 255, 153, 0.5), 0 0 30px rgba(0, 106, 255, 0.5), 0 0 40px rgba(255, 0, 149, 0.5);
+}
+
+.Content a:active {
+    text-shadow: 0 0 15px rgba(255, 69, 69, 0.7), 0 0 30px rgba(0, 255, 153, 0.7), 0 0 45px rgba(0, 106, 255, 0.7), 0 0 60px rgba(255, 0, 149, 0.7);
+}
+
+.Content a:focus {
+    text-shadow: 0 0 15px rgba(255, 69, 69, 0.7), 0 0 30px rgba(0, 255, 153, 0.7), 0 0 45px rgba(0, 106, 255, 0.7), 0 0 60px rgba(255, 0, 149, 0.7);
+}
+
+.Content{
+  display: flex;  
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; 
+  gap: 25px;           
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;  
+  margin-right: auto;
+  padding: 2em;
+  width: 300px;
+  background: #1c1f2b;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.Content::after, .Content::before{ 
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+.card::before{
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+@keyframes spin{
+  from{
+    --angle: 0deg;
+  }
+  to{
+    --angle: 360deg;
+  }
+}
+
+
+
+.contitle{
+    background-color: white;     
+    margin: 0 25px;   
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.imageko img {
+    width: 120px;
+    height: 120px;
+    clip-path: circle(50% at 50% 50%);
+    object-fit: cover;
+}
+
+.imageko img {
+    width: 120px;
+    height: 120px;
+    clip-path: circle(50% at 50% 50%);
+    object-fit: cover;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    clip-path: circle(50% at 50% 50%);
+    object-fit: cover;
+}
+
+p{
+    font-size: 2vw;
+}
+
+.image-container {
+width: 100%;
+aspect-ratio: 1/1; /* maintains square aspect ratio */
+overflow: hidden;
+border-radius: 50%;
+}
+
+.image-container img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+body{
+    margin: 0;
+    background-color: black;
+}
+h1, h2, h3{
+    color: white;
+    text-shadow: 0 0 10px #00ffea, 0 0 20px #1577ff, 0 0 30px #002dff, 0 0 40px #2600ff; 
+    transition: all 0.3s ease;
+}
+
+p{
+    text-shadow: 0 0 10px #00ffea, 0 0 20px #1577ff, 0 0 30px #002dff, 0 0 40px #2600ff; 
+    transition: all 0.3s ease;
+    color: white;
+}
+a{
+    text-shadow: 0 0 10px #00ffea, 0 0 20px #1577ff, 0 0 30px #002dff, 0 0 40px #2600ff; 
+    transition: all 0.3s ease;
+    color: white;
+}
+
+
